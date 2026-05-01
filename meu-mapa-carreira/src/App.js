@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import foto from "./foto.png";
+import curriculo from "./Curriculo_Iasmin_Lopes.pdf";
 
 function Header() {
   return (
@@ -51,7 +52,7 @@ function SobreMim() {
         desenvolvedora Fullstack focada em código limpo e colaboração.
       </p>
       <a
-        href="/curriculo.pdf"
+        href={curriculo}
         download="Curriculo_Iasmin_Lopes.pdf"
         className="btn-cv"
         target="_blank"
