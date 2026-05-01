@@ -182,14 +182,12 @@ function Skills() {
           "https://api.github.com/users/IasminMoreira/repos",
         );
         const repos = await resposta.json();
-
         const contagem = {};
         repos.forEach((repo) => {
           if (repo.language) {
             contagem[repo.language] = (contagem[repo.language] || 0) + 1;
           }
         });
-
         setLinguagens(contagem);
       } catch (erro) {
         console.error("Erro ao buscar GitHub:", erro);
@@ -197,7 +195,6 @@ function Skills() {
         setCarregando(false);
       }
     }
-
     buscarLinguagens();
   }, []);
 
@@ -208,8 +205,15 @@ function Skills() {
     { nome: "JavaScript", porcentagem: 80 },
     { nome: "HTML/CSS", porcentagem: 70 },
     { nome: "Python", porcentagem: 60 },
+    { nome: "C++", porcentagem: 50 },
     { nome: "React", porcentagem: 40 },
     { nome: "Java", porcentagem: 40 },
+  ];
+
+  const automacao = [
+    { nome: "Arduino / ESP32", porcentagem: 75 },
+    { nome: "Circuitos Elétricos", porcentagem: 70 },
+    { nome: "CLP", porcentagem: 65 },
   ];
 
   return (
@@ -218,6 +222,13 @@ function Skills() {
 
       <p className="skill-grupo-titulo">Conhecimentos</p>
       {conhecimentos.map((s, i) => (
+        <SkillBar key={i} nome={s.nome} porcentagem={s.porcentagem} />
+      ))}
+
+      <p className="skill-grupo-titulo" style={{ marginTop: "1.25rem" }}>
+        Automação Industrial
+      </p>
+      {automacao.map((s, i) => (
         <SkillBar key={i} nome={s.nome} porcentagem={s.porcentagem} />
       ))}
 
@@ -246,10 +257,6 @@ function Skills() {
         </div>
         <div className="idioma-item">
           <span className="idioma-nome">Inglês</span>
-          <span className="idioma-nivel">Técnico</span>
-        </div>
-        <div className="idioma-item">
-          <span className="idioma-nome">Espanhol</span>
           <span className="idioma-nivel">Técnico</span>
         </div>
       </div>
