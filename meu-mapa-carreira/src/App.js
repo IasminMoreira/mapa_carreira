@@ -51,7 +51,7 @@ function SobreMim() {
         desenvolvedora Fullstack focada em código limpo e colaboração.
       </p>
       <a
-        href="https://drive.google.com/uc?export=download&id=1sURoS7-aQWgpetPVEvOwADu4WW74Vn03"
+        href="/curriculo.pdf"
         download="Curriculo_Iasmin_Lopes.pdf"
         className="btn-cv"
         target="_blank"
