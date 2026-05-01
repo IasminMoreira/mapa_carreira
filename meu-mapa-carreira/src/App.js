@@ -202,20 +202,34 @@ function Skills() {
   }, []);
 
   const total = Object.values(linguagens).reduce((a, b) => a + b, 0);
-
   const calcularPct = (quantidade) => Math.round((quantidade / total) * 100);
+
+  const conhecimentos = [
+    { nome: "JavaScript", porcentagem: 80 },
+    { nome: "HTML/CSS", porcentagem: 70 },
+    { nome: "Python", porcentagem: 60 },
+    { nome: "React", porcentagem: 40 },
+    { nome: "Java", porcentagem: 40 },
+  ];
 
   return (
     <section className="skills">
       <h2>Skills</h2>
 
+      <p className="skill-grupo-titulo">Conhecimentos</p>
+      {conhecimentos.map((s, i) => (
+        <SkillBar key={i} nome={s.nome} porcentagem={s.porcentagem} />
+      ))}
+
       {carregando ? (
-        <p style={{ fontSize: "13px", color: "#888" }}>
+        <p style={{ fontSize: "13px", color: "#888", marginTop: "1rem" }}>
           Carregando dados do GitHub...
         </p>
       ) : (
         <>
-          <p className="skill-grupo-titulo">Do GitHub</p>
+          <p className="skill-grupo-titulo" style={{ marginTop: "1.25rem" }}>
+            Do GitHub
+          </p>
           {Object.entries(linguagens)
             .sort((a, b) => b[1] - a[1])
             .map(([lang, qtd]) => (
@@ -232,6 +246,10 @@ function Skills() {
         </div>
         <div className="idioma-item">
           <span className="idioma-nome">Inglês</span>
+          <span className="idioma-nivel">Técnico</span>
+        </div>
+        <div className="idioma-item">
+          <span className="idioma-nome">Espanhol</span>
           <span className="idioma-nivel">Técnico</span>
         </div>
       </div>
