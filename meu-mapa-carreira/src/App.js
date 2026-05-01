@@ -205,15 +205,15 @@ function Skills() {
     { nome: "JavaScript", porcentagem: 80 },
     { nome: "HTML/CSS", porcentagem: 70 },
     { nome: "Python", porcentagem: 60 },
-    { nome: "C++", porcentagem: 50 },
+    { nome: "C++", porcentagem: 80 },
     { nome: "React", porcentagem: 40 },
     { nome: "Java", porcentagem: 40 },
   ];
 
   const automacao = [
-    { nome: "Arduino / ESP32", porcentagem: 75 },
-    { nome: "Circuitos Elétricos", porcentagem: 70 },
-    { nome: "CLP", porcentagem: 65 },
+    { nome: "Arduino / ESP32", porcentagem: 90 },
+    { nome: "Circuitos Elétricos", porcentagem: 90 },
+    { nome: "CLP", porcentagem: 75 },
   ];
 
   return (
