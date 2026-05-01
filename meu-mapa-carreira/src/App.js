@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import './App.css';
-import foto from './foto.png';
+import { useState, useEffect } from "react";
+import "./App.css";
+import foto from "./foto.png";
 
 function Header() {
   return (
@@ -51,7 +51,7 @@ function SobreMim() {
         desenvolvedora Fullstack focada em código limpo e colaboração.
       </p>
       <a
-        href="/curriculo.pdf"
+        href="/Curriculo_Iasmin_Lopes.pdf"
         download="Curriculo_Iasmin_Lopes.pdf"
         className="btn-cv"
       >
