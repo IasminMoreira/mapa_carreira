@@ -259,6 +259,10 @@ function Skills() {
           <span className="idioma-nome">Inglês</span>
           <span className="idioma-nivel">Técnico</span>
         </div>
+        <div className="idioma-item">
+          <span className="idioma-nome">Espanhol</span>
+          <span className="idioma-nivel">Técnico</span>
+        </div>
       </div>
     </section>
   );
