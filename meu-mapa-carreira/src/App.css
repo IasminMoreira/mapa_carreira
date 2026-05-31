@@ -359,3 +359,53 @@
   padding: 2px 10px;
   border-radius: 99px;
 }
+
+@media (max-width: 640px) {
+  .folha {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .header-links {
+    text-align: center;
+  }
+
+  .header-foto {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sobre {
+    padding: 1.5rem 1.25rem 1rem;
+  }
+
+  .conteudo-principal {
+    grid-template-columns: 1fr;
+    padding: 0 1.25rem;
+  }
+
+  .skills {
+    position: static;
+    border-top: 1px solid #ddd;
+    padding-top: 1.5rem;
+  }
+
+  .mapa {
+    padding-top: 1.5rem;
+  }
+
+  .skill-topo {
+    flex-wrap: nowrap;
+  }
+
+  .skill-pct {
+    flex-shrink: 0;
+  }
+}
